@@ -6,8 +6,10 @@ function ExpenseItem(props) {
     const expenseTitle = "Bolo pa Maggs";
     const expenseAmount = 400;*/
 
-  const month = props.date.toLocaleString("pt-PT", { month: "long" }).toLowerCase(); // fica mais clean numa var à parte do que dentro do JSX code
-  const day = props.date.toLocaleString("pt-PT", { day: "2-digit"});
+  const month = props.date
+    .toLocaleString("pt-PT", { month: "long" })
+    .toLowerCase(); // fica mais clean numa var à parte do que dentro do JSX code
+  const day = props.date.toLocaleString("pt-PT", { day: "2-digit" });
   const year = props.date.getFullYear();
 
   return (
