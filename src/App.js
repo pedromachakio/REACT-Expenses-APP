@@ -24,9 +24,15 @@ function App() {
     },
   ];
 
+  const newExpenseHandler = function (enteredExpenseData) {
+    console.log("a imprimir na app js ")
+    console.log(enteredExpenseData)
+  }
+
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onNewExpense={newExpenseHandler}/>
       <Expenses expenses={expenses} />
     </div>
   );
