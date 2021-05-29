@@ -18,8 +18,18 @@ function ExpenseForm() {
     setDateEnteredByUser(event.target.value);
   };
 
+  const formSubmitHandler = function (event) {
+    event.preventDefault(); // cancelar comportamento default de dar refresh depois de um submit
+
+    const expenseData = {
+      title: titleEnteredByUser,
+      amount: amountEnteredByUser,
+      date: new Date(dateEnteredByUser),
+    };
+  };
+
   return (
-    <form>
+    <form onSubmit={formSubmitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
