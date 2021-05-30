@@ -12,27 +12,17 @@ function Expenses(props) {
   return (
     <div>
       <Card className="expenses">
-        <ExpenseFilter selectedYear={yearSelected} onYearChange={saveYearChangeHandler} />
-        <ExpenseItem
-          title={props.expenses[0].title}
-          price={props.expenses[0].price}
-          date={props.expenses[0].date}
+        <ExpenseFilter
+          selectedYear={yearSelected}
+          onYearChange={saveYearChangeHandler}
         />
-        <ExpenseItem
-          title={props.expenses[1].title}
-          price={props.expenses[1].price}
-          date={props.expenses[1].date}
-        />
-        <ExpenseItem
-          title={props.expenses[2].title}
-          price={props.expenses[2].price}
-          date={props.expenses[2].date}
-        />
-        <ExpenseItem
-          title={props.expenses[3].title}
-          price={props.expenses[3].price}
-          date={props.expenses[3].date}
-        />
+        {props.expenses.map((expenses) => (
+          <ExpenseItem
+            title={expenses.title}
+            price={expenses.price}
+            date={expenses.date}
+          ></ExpenseItem>
+        ))}
       </Card>
     </div>
   );
