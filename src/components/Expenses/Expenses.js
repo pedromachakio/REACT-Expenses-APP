@@ -9,7 +9,6 @@ function Expenses(props) {
 
   function saveYearChangeHandler(selectedYear) {
     setSelectedYear(selectedYear);
-    console.log(Array.isArray(props.items));
   }
   return (
     <div>
