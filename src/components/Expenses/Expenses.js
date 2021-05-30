@@ -6,8 +6,10 @@ import { useState } from "react";
 
 function Expenses(props) {
   const [yearSelected, setSelectedYear] = useState("2021");
+
   function saveYearChangeHandler(selectedYear) {
     setSelectedYear(selectedYear);
+    console.log(Array.isArray(props.items));
   }
   return (
     <div>
@@ -16,12 +18,12 @@ function Expenses(props) {
           selectedYear={yearSelected}
           onYearChange={saveYearChangeHandler}
         />
-        {props.expenses.map((expenses) => (
+        {props.items.map((expense) => (
           <ExpenseItem
-            title={expenses.title}
-            price={expenses.price}
-            date={expenses.date}
-          ></ExpenseItem>
+            title={expense.title}
+            price={expense.price}
+            date={expense.date}
+          />
         ))}
       </Card>
     </div>
