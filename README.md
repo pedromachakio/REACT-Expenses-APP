@@ -1,8 +1,8 @@
 # REACT-Expenses-APP
-First React APP - Expense Tracker @ Udemy
+This is a SPA (Single Page Application) expense tracker where you will be able to input your expenses and then filter them by year.
 
+Currently there is, however, no persistence of data and therefore the data is lost upon refreshing the page - this shall be corrected/introduced at a latter stage of the app's development.
 
-This is the first SPA (Single Page Application) that I am creating in React alongside the Udemy course "React - The Complete Guide (incl Hooks, React Router, Redux)".
+This app is being developed in React and is serving as a practical introduction to the library, alongside the Udemy course "React - The Complete Guide (incl Hooks, React Router, Redux)".
 
-Although version control is not included in the project I decided to use it to also practice it.
-I won't be using the Desktop app but rather just the terminal.
+For version control I won't be using GitHub's Desktop app but rather just the terminal.
